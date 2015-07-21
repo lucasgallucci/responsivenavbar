@@ -1,0 +1,201 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+
+</head>
+<body>
+
+<div class="burguer" id="nav">
+	<span></span>
+	<span></span>
+	<span></span> 
+</div>
+
+
+<nav>
+	<div class="menu-entero">
+		<div class="logo">
+			<h1>LOGO</h1>
+		</div>
+<div class="search">
+					<form>
+						<input type="text" placeholder="Search..." id="search">
+						<button class="ion-ios-search-strong" id="search-button"></button>
+					</form>
+				</div>
+		<article class="menu">
+			<div>
+
+				<h3>Section</h3>
+				<ul>
+					<li>
+						<a href="#">link1</a>
+					</li>
+					
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+
+		<article class="menu">
+			<div>
+
+				<h3>Section</h3>
+				<ul>
+					<li>
+						<a href="#">link1</a>
+					</li>
+					
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+
+		<article class="menu">
+			<div>
+
+				<h3>Section</h3>
+				<ul>
+					<li>
+						<a href="#">link1</a>
+					</li>
+					
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+
+					<li>
+						<a href="#">link1</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		
+
+		<div class="nav--footer">
+			<ul>
+				<li>
+					<a href="#" target="_blank">
+						<i class="ion-social-facebook"></i>
+						<span>Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<i class="ion-social-twitter"></i>
+						<span>Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<i class="ion-social-instagram"></i>
+						<span>Instagram</span>
+					</a>
+				</li>
+			</ul>
+			
+			
+			
+		</div>
+	</div>
+</nav>
+
+
+</body>
+</html>
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script type="text/javascript">
+$(document).on("ready",function(){
+
+	$("#search").on("focus",function(){
+		$("#search-button").css("fontSize","50px");
+	});
+	$("#nav").on("click",function(){
+    	$(this).toggleClass('open');
+    	$("nav").toggleClass('open');
+		if($(this).attr("data")!="abierto"){
+			$(this).attr("data","abierto");
+			$alto=$(".menu-entero").height();
+			$alto=$alto+"px";
+			$("nav").animate({
+				"height":$alto,
+			},1000,"easeInOutQuart")
+		} else {
+			$(this).attr("data","cerrado");
+			$("nav").animate({
+				"height":$(".logo").height(),
+			},1000,"easeInOutQuart")
+		}
+	})
+})
+
+
+</script>
